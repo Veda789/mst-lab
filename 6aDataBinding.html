@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="app1" ng-controller="ctrl1">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <p>Name : <input type="text" ng-model="clg"></p>
+  <h1>Hello {{name}} of institute {{clg}}</h1>
+</div>
+<script>
+    var app=angular.module("app1",[])
+    app.controller('ctrl1',function($scope){
+        $scope.name="varshitha";
+        $scope.clg="JNTUK";
+    });
+</script>
+</body>
+</html>
