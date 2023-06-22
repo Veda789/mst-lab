@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="app1" ng-controller="ctrl1">
+    <div ng-show="show1">
+        <img src="C:\nodejs_pract\angularjs\pict\bulb-off.png">
+    </div>
+    <div ng-show="show2">
+        <img src="C:\nodejs_pract\angularjs\pict\bulb-on.png">
+    </div>
+    <button ng-click="fun1()">{{state1}}</button>
+</div>
+<script>
+    var app=angular.module('app1',[]);
+    app.controller('ctrl1',function($scope){
+        $scope.show1=true;
+        $scope.show2=false;
+        $scope.state1="off";
+        $scope.fun1=function(){
+            $scope.show2=!$scope.show2;
+            $scope.show1=!$scope.show1;
+            if($scope.show1==true)
+            $scope.state1="on";
+            else
+            $scope.state1="off";
+        }
+    });
+</script>
+</body>
+</html>
